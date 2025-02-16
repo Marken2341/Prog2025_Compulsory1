@@ -23,9 +23,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	UPROPERTY(VisibleAnywhere)
 	class UBoxComponent* CollisionBox;
 
-	UFUNCTION()
-		void NotifyActorBeginOverlap(AActor* OtherActor) override;
+	UPROPERTY(VisibleAnywhere)
+	class UCubeComponent* BoxMesh;
 };
